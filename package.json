@@ -25,6 +25,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.16.0",
     "mongoose": "^8.14.1",
+    "sslcommerz": "^1.7.0",
+    "stripe": "^18.1.0",
     "zod": "^3.24.4"
   },
   "devDependencies": {
@@ -36,6 +38,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^22.15.3",
+    "@types/stripe": "^8.0.416",
     "eslint": "^9.14.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0",

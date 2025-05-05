@@ -17,6 +17,6 @@ export default {
 
   // stripe
 
-//   stripe_sk: process.env.STRIPE_SK,
+  stripe_sk: process.env.STRIPE_SK,
 };
 
