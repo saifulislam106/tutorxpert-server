@@ -1,3 +1,4 @@
+
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 import router from './app/routes';
@@ -90,7 +91,11 @@ app.get(
 
       console.log('Payment session details:', session);
 
-      const { email, id, isPayment, totalPrice } = session.metadata;
+      const id = session.metadata?.id; //added isPayment, totalPrice email later
+      if (!id) {
+        res.status(400).json({ error: 'Session metadata is missing or invalid' });
+        return;
+      }
 
       // Now fetch Tutor permit data
       const tutorPermit = await PermitTutor.findByIdAndUpdate(
