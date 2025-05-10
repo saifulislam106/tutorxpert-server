@@ -11,6 +11,7 @@ const createUser = async (payload: TUser) => {
     payload.availability.from = new Date(payload.availability.from);
     payload.availability.to = new Date(payload.availability.to);
   }
+  console.log('payload', payload);
 
   const result = await User.create(payload);
   return result;
